@@ -1,6 +1,4 @@
-// Soatni ko'rsatish uchun.
 const timeEl = document.querySelector('.time')
-// console.log(timeEl);
 
 function setInsertParam(param){
     if(param < 10){
@@ -21,14 +19,9 @@ function getTime () {
     second = setInsertParam(second);
 
     let timeView = `${hour}:${minute}:${second}`
-    // console.log(timeView);
 
     timeEl.innerHTML = timeView
 }
-
-
-// getTime()
-
 setInterval ( () => {
     getTime()
 }, 1000 )
@@ -47,9 +40,6 @@ function getDay () {
 
     day.innerHTML = dayView
 }
-
-// getDay()
-
 setInterval ( () => {
     getDay()
 }, 1000)
@@ -71,9 +61,6 @@ function getDateYear () {
 
     date.innerHTML = dateView
 }
-
-// getDateYear()
-
 setInterval ( () => {
     getDateYear()
 }, 1000)
