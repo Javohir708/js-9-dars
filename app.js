@@ -2,6 +2,12 @@
 const timeEl = document.querySelector('.time')
 // console.log(timeEl);
 
+function setInsertParam(param){
+    if(param < 10){
+        param = '0'+ param;
+    }
+    return param;
+}
 
 function getTime () {
     let date = new Date()
@@ -10,11 +16,16 @@ function getTime () {
     let minute = date.getMinutes();
     let second = date.getSeconds();
 
+    hour = setInsertParam(hour);
+    minute = setInsertParam(minute);
+    second = setInsertParam(second);
+
     let timeView = `${hour}:${minute}:${second}`
     // console.log(timeView);
 
     timeEl.innerHTML = timeView
 }
+
 
 // getTime()
 
