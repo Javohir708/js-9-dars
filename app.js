@@ -1,10 +1,10 @@
 const timeEl = document.querySelector('.time')
 
-function setInsertParam(param){
-    if(param < 10){
-        param = '0'+ param;
+function qoshish (zero){
+    if(zero < 10){
+        zero = '0'+ zero;
     }
-    return param;
+    return zero;
 }
 
 function getTime () {
@@ -14,9 +14,9 @@ function getTime () {
     let minute = date.getMinutes();
     let second = date.getSeconds();
 
-    hour = setInsertParam(hour);
-    minute = setInsertParam(minute);
-    second = setInsertParam(second);
+    hour = qoshish(hour);
+    minute = qoshish(minute);
+    second = qoshish(second);
 
     let timeView = `${hour}:${minute}:${second}`
 
